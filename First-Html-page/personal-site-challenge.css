@@ -1,0 +1,109 @@
+body {
+    --header-background: #E4F9F5;
+    --footer-background: #66BFBF;
+    --hr-and-footer-text: #EAF6F6;
+    --main-text: #40514E;
+    --h1-color: #66BFBF;
+    --h2-color: #66BFBF;
+    --h3-color:  #11999E;
+    --button-color:  #11cdd4;
+    --button-hover-color: #30e3cb;
+    --button-text-color: white;
+    font-family: 'Merriweather', 'Montserrat','Sacrament';
+    color: var(--main-text);
+}
+
+h1{
+    font-family: "Sacramento";
+    color: var(--h1-color);
+}
+
+h2, h3{
+    font-family: 'Montserrat';
+}
+
+h2 {
+    color: var(--h2-color);
+}
+
+h3{
+    color: var(--h3-color);
+}
+
+a {
+    color: var(--h3-color);
+    margin: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+header{
+    background-color: var(--header-background);
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+hr {
+    position: relative;
+    color: var(--hr-and-footer-text);
+    border: transparent;
+    border-top: 0.25rem dotted var(--hr-and-footer-text);
+    width: 5%;
+}
+
+button{
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    margin: 5rem;
+    font-size: medium;
+}
+
+button:hover{
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--footer-background);
+    color: var(--hr-and-footer-text);
+    padding: 2rem;
+}
+.text-underline{
+    text-decoration: underline;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-cloud{
+    position: absolute;
+    right: 300px;
+    top: 40px;
+}
+.bottom-cloud{
+    position: absolute;
+    left: 250px;
+    bottom: 300px;
+}
+.site-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.skill-container{
+    display: flex;
+    flex-direction: row;
+    width: 66%;
+    margin: 1rem;
+}
+
+.get-in-touch-text{
+    width: 66%;
+    text-align: center
+}
