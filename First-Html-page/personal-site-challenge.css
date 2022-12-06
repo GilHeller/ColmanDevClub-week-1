@@ -3,8 +3,7 @@ body {
     --footer-background: #66BFBF;
     --hr-and-footer-text: #EAF6F6;
     --main-text: #40514E;
-    --h1-color: #66BFBF;
-    --h2-color: #66BFBF;
+    --h1-h2-color: #66BFBF;
     --h3-color:  #11999E;
     --button-color:  #11cdd4;
     --button-hover-color: #30e3cb;
@@ -15,7 +14,7 @@ body {
 
 h1{
     font-family: "Sacramento";
-    color: var(--h1-color);
+    color: var(--h1-h2-color);
 }
 
 h2, h3{
@@ -23,7 +22,7 @@ h2, h3{
 }
 
 h2 {
-    color: var(--h2-color);
+    color: var(--h1-h2-color);
 }
 
 h3{

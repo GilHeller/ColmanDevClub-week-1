@@ -45,10 +45,12 @@ progress[value]::-webkit-progress-bar {
     background:  var(--site-background);
     border-radius: 5px;
 }
+
 progress[value]::-webkit-progress-value {
     background:  linear-gradient(90deg, var(--progress-bar-start-gradient), var(--progress-bar-end-gradient));
     border-radius: 5px;
 }
+
 progress[value]::-moz-progress-bar {
     background:  linear-gradient(90deg, var(--progress-bar-start-gradient), var(--progress-bar-end-gradient));
     border-radius: 5px;
@@ -91,6 +93,7 @@ progress[value]::-moz-progress-bar {
 .icons-container {
     padding: 0 20px;
     display: flex;
+    width: 100%;
 }
 
 .icon{
@@ -135,4 +138,37 @@ progress[value]::-moz-progress-bar {
     border-width: 0  25px 20px 0;
     border-color: transparent var(--text-2-color) transparent transparent;
     position: absolute;
+}
+
+.icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;;
+}
+
+label{
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700
+}
+
+input[type="file"]{
+    background: transparent;
+    display: none;
+}
+
+.upload-label{
+    color: var(--text-1-color);
+    background-color: var(--site-background);
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    margin-left: 0.5rem;
+    box-shadow: 1px 1px 5px var(--text-1-color);
+}
+
+.upload-label:hover{
+    box-shadow: none;
 }

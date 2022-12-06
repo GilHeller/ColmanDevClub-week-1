@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="stylesheet" href="index.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <title>Fylo data storage component</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <script src="index.js"></script>
+    <title>Fylo data storage component</title>
+  </head>
 
   <body>
     <div class="site-background">
-      <img src="assets/bg-desktop.png">
+      <img src="assets/bg-desktop.png" />
     </div>
     <div class="floating-container">
       <div class="left-data">
-        <img class="logo" src="assets/logo.svg"/>
+        <img class="logo" src="assets/logo.svg" />
         <div class="icons-container">
-          <img class="icon" src="assets/icon-document.svg"/>
-          <img class="icon" src="assets/icon-folder.svg"/>
-          <img class="icon" src="assets/icon-upload.svg"/>
+          <img class="icon" src="assets/icon-document.svg" />
+          <img class="icon" src="assets/icon-folder.svg" />
+          <img class="icon" src="assets/icon-upload.svg" />
+        </div>
+        <div>
+          <label class="upload-label" for="upload-input">Upload image</label>
+          <input id="upload-input" type="file" id="upload" multiple />
         </div>
       </div>
       <div class="right-data">
-        <p>You’ve used <b>815 GB</b> of your storage</p>
-        <progress value="815" max="1000"></progress>
+        <p>You’ve used <b id="usage-info">0 MB</b> of your storage</p>
+        <progress id="storage-progress" value="0" max="1000"></progress>
       </div>
       <div class="baloon">
-        <h1>185</h1>
-        <p>GB LEFT</p>
+        <h1 id="baloon-info">1000</h1>
+        <p>MB LEFT</p>
       </div>
     </div>
-    
   </body>
 </html>
