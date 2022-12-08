@@ -1,4 +1,7 @@
 window.onload = () => {
+    const MAX_SIZE = 1000;
+    const MB = 1024 * 1024;
+    
     const setCookie = (cookieName, cookieValue) => {
         const expires = new Date();
         if (!getAllCookies()?.[cookieName]) {    
@@ -12,7 +15,7 @@ window.onload = () => {
         const cookiesSeperated = document?.cookie?.split(";");
         const cookiesObject = {};
         cookiesSeperated?.map(cookie => {
-            const cookieSeperated = cookie?.split("=")
+            const cookieSeperated = cookie?.split("=");
             cookiesObject[cookieSeperated[0]] = Number(cookieSeperated[1]) || 0;
         });
         return cookiesObject;
@@ -20,7 +23,7 @@ window.onload = () => {
 
     const saveFiles = (files) => {
         files.map(file => {
-            const cookieName = `${file.name}_size`
+            const cookieName = `${file.name}_size`;
             setCookie(cookieName, file?.size);
         })
     }
@@ -38,11 +41,11 @@ window.onload = () => {
         const storageProgress = document.getElementById("storage-progress");
         const usageInfo = document.getElementById("usage-info");
         const baloonInfo = document.getElementById("baloon-info");
-        const totalSizeMB = parseInt(totalSizeOfFilesInBytes() / 1024);
+        const totalSizeMB = parseInt(totalSizeOfFilesInBytes() / MB * MAX_SIZE);
         if (storageProgress.value !== totalSizeMB){
             storageProgress.value = totalSizeMB;
             usageInfo.textContent = `${totalSizeMB} MB`;
-            baloonInfo.textContent = `${1000 - totalSizeMB}`
+            baloonInfo.textContent = `${MAX_SIZE - totalSizeMB}`
         }
         
     }
@@ -60,6 +63,5 @@ window.onload = () => {
         updateProgress();
     }
     updateProgress();
-    
     document.getElementById("upload-input").addEventListener("change", handleFileUplaod);
 }
